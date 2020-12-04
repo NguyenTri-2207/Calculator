@@ -1,0 +1,81 @@
+
+
+
+*{
+  margin:0px;
+  padding:0px;
+  border-radius: 0px;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+#root{
+  text-align:center;
+  
+}
+.App {
+  width: 30rem;
+  height: 50rem;
+  margin: 4rem auto;
+  border-radius: 2rem;
+  background-color: #4d4b4b;
+}
+.calculator-title{
+  font-size:2.5rem;
+  background: radial-gradient(#1c1c1d,#ada9a9);
+  margin: 0 auto;
+  padding: 1rem 0;
+  border-radius: 2px;
+  color: #ffffff;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+.mainCalc{
+  margin:0px;
+  padding:0px;
+  border-radius: 0px;
+  box-sizing: border-box;
+  
+}
+.screen-row input{
+  width: 100%;
+  height:3.5rem ;
+  background: #4d4b4b;
+  border-bottom: 1px solid wheat;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  text-align: right;
+  font-size: 3rem;
+  outline: none;
+  border: 0;
+}
+.screen :last-child input{
+  background-color: #707069;
+  height: 5rem;
+  border-top: 0.2rem solid #b8b816;
+}
+input[type="button"]{
+  width: 6rem;
+  height: 6rem;
+  border-radius: 1rem;
+  color: white;
+  text-align: center;
+  outline: none;
+  display: inline-block;
+  border: 0;
+  font-size: 1.8rem;
+  margin: 0.5rem;
+  background-color: #1c1c1d;
+}
+
+input[type="button"]:active{
+  background: rgb(255, 255, 255);
+}
+
+.btn-action {
+  background-color: #c2bf03 !important;
+  
+}
+
+.button-bottom input{
+  width: 13rem;
+}

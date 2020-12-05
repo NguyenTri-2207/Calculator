@@ -9,10 +9,7 @@ const OutputScreenRow = (props) => {
             </div>
            
         </div>
-    )
-
-        
-        
+    )        
 }
 
 export default OutputScreenRow;

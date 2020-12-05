@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class CalculatorTitle extends Component {
-    render() {
-        const { title } = this.props
+const CalculatorTitle = (props) => {
         return (
             <div className="calculator-title">
-                {title}
+            {props.title}
             </div>
         );
-    }
-}
+};
 
 export default CalculatorTitle;

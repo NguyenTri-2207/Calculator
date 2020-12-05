@@ -1,18 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class ButtonsNumbers extends Component {
-    render() {
-        const { className, label, handleClick } = this.props
-
+const ButtonsNumbers = (props) =>  {
         return (
             <input
-                className={className}
+                className={props.className}
                 type="button"
-                value={label}
-                onClick={handleClick}
+                value={props.label}
+                onClick={props.handleClick}
             />
         );
-    }
 }
 
 export default ButtonsNumbers;

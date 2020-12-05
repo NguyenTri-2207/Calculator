@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import CalculatorTitle from './CalculatorTitle';
 import ButtonsNumbers from './ButtonsNumbers';
 import OutputScreen from './outputScreen';
@@ -17,7 +17,7 @@ class Calculator extends React.Component {
             number: '',
             numberStore: '',
             type: '',
-            ketqua: ''
+            result: ''
         }
     }
 
@@ -48,7 +48,7 @@ class Calculator extends React.Component {
             number: '',
             numberStore: '',
             type: '',
-            ketqua: ''
+            result: ''
         })
     }
 
@@ -77,28 +77,28 @@ class Calculator extends React.Component {
         if (this.state.number && this.state.numberStore && this.state.type) {
             switch (this.state.type) {
                 case '+':
-                    const sum = ((parseFloat(this.state.number) + parseFloat(this.state.numberStore)) * 100) / 100;
-                    console.log(sum)
+                    const addition = ((parseFloat(this.state.number) + parseFloat(this.state.numberStore)) * 100) / 100;
+                    console.log(addition)
                     this.setState({
-                        ketqua: sum
+                        result: addition
                     })
                     break;
                 case '-':
-                    const spile = ((parseFloat(this.state.number) - parseFloat(this.state.numberStore)) * 100) / 100;
+                    const subtraction = ((parseFloat(this.state.number) - parseFloat(this.state.numberStore)) * 100) / 100;
                     this.setState({
-                        ketqua: spile
+                        result: subtraction
                     })
                     break;
                 case '/':
-                    const chia = ((parseFloat(this.state.number) / parseFloat(this.state.numberStore)) * 100) / 100;
+                    const divide = ((parseFloat(this.state.number) / parseFloat(this.state.numberStore)) * 100) / 100;
                     this.setState({
-                        ketqua: chia
+                        result: divide
                     })
                     break;
                 case '*':
-                    const nhan = ((parseFloat(this.state.number) * parseFloat(this.state.numberStore)) * 100) / 100;
+                    const multiplication = ((parseFloat(this.state.number) * parseFloat(this.state.numberStore)) * 100) / 100;
                     this.setState({
-                        ketqua: nhan
+                        result: multiplication
                     })
                     break;
                 default:
@@ -108,12 +108,12 @@ class Calculator extends React.Component {
     }
 
     render() {
-        const { number, numberStore, ketqua, type } = this.state
+        const { number, numberStore, result, type } = this.state
         return (
             <div className="frame">
                 <CalculatorTitle title="Calculator" />
                 <div className="mainCalc">
-                    <OutputScreen number={number} numberStore={numberStore} type={type} answer={ketqua} />
+                    <OutputScreen number={number} numberStore={numberStore} type={type} answer={result} />
                     <div className="button-row">
                         <ClearButton className="btn-action" label={'Clear'} handleClearValue={this.handleClearValue} />
                         <BackButton className="btn-action" label={'Delete'} handleBackButton={this.handleBackButton} />
